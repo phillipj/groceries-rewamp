@@ -11,7 +11,7 @@ class GroceryStore {
     }
 
     add(text) {
-        const existingIdx = this._findIdxByText(text)
+        const existingIdx = this._findIdxByText(text);
 
         if (existingIdx !== -1) {
             this.groceries[existingIdx].completed = false
@@ -20,12 +20,8 @@ class GroceryStore {
         }
     }
 
-    toggle(grocery) {
-        grocery.completed = !grocery.completed;
-    }
-
     _findIdxByText(text) {
-        return this.groceries.findIndex((g) => g.text === text);
+        return this.groceries.findIndex((g) => g.text.toLowerCase() === text.toLowerCase());
     }
 }
 
