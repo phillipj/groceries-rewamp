@@ -12,4 +12,12 @@ $ npm start
 
 *This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).*
 
+## Deploying
+
+```bash
+$ npm run deploy
+```
+
+will make a production ready build and deploy as a GitHub page for the current repo.
+
 ## MIT licensed
