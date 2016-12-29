@@ -2,6 +2,7 @@
   "name": "groceries-rewamp",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://handlelista.lightweight.no",
   "devDependencies": {
     "gh-pages": "0.12.0",
     "react-scripts": "0.8.4"
@@ -20,6 +21,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "npm run build&&gh-pages -d build"
-  },
-  "homepage": "http://phillipj.github.io/groceries-rewamp"
+  }
 }
