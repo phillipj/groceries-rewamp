@@ -2,11 +2,11 @@ import { extendObservable } from 'mobx';
 
 import { Grocery } from './Grocery';
 
-class GroceryStore {
+export default class GroceryStore {
 
-    constructor() {
+    constructor(initialGroceries = []) {
         extendObservable(this, {
-            groceries: []
+            groceries: initialGroceries
         });
     }
 
@@ -32,5 +32,3 @@ class GroceryStore {
       this.groceries.splice(toIndex, 0, element);
     }
 }
-
-export default new GroceryStore();

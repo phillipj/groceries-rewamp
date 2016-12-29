@@ -4,9 +4,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
-import store from './store';
+import GroceryStore from './store';
+import { fromStorageOrEmpty, saveUponChanges } from './persistence';
+
+const initialGroceries = fromStorageOrEmpty();
+const store = new GroceryStore(initialGroceries);
 
 injectTapEventPlugin();
+saveUponChanges(store);
 
 ReactDOM.render(
   <App store={store} />,
